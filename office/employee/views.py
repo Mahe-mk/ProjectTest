@@ -15,8 +15,5 @@ def empDetails(request):
 def index(request):
     return HttpResponse("Hi welcome to the index page")
 
-def origin(request):
-    return HttpResponse( "continue to the main HTTP Request and its actions")
-
 def testing(request):
     return render(request, 'employee/test.html')
