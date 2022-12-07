@@ -13,7 +13,7 @@ def empDetails(request):
     #return render(request,'employee/empdetail.html', {'employee':emp_data})
 
 def index(request):
-    return HttpResponse("Hi welcome to the index page")
+    return HttpResponse("Hi welcome to index page")
 
 def testing(request):
     return render(request, 'employee/test.html')
