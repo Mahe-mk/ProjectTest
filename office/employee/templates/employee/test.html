@@ -1,0 +1,19 @@
+<html>
+{% load static %}
+<head>
+    <title> DB Model Practicing </title>
+</head>
+
+{% csrf_token %}
+<body>
+        <p style="color:blue">Employee Details.</p>
+
+        {% for employeedetail in emp_list %}
+            <h4> Emp_no: {{ employeedetail.empNo }}</h4>
+            <h4> Emp_name: {{ employeedetail.empName }}</h4>
+            <h4> Emp_salary: {{ employeedetail.empSalary }}</h4>
+            <h4> Emp_address: {{ employeedetail.empAddress }}</h4>
+            <img src="{{ employeedetail.empPhoto }}" width="180px" height="180px"> </img>
+        {% endfor %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+{% load static %}
+<head>
+    <title> DB Model Practicing </title>
+</head>
+{% csrf_token %}
+<body bgcolor="lightgrey">
+<style>
+    table , th, td {
+    text-align:center;
+    }
+</style>
+        <table border="2" style="width:100% ">
+                <tr bgcolor="hockey" style="color:white"  >
+                <th>EMP_NO </th>
+                <th>EMP_NAME </th>
+                <th>EMP_SALARY</th>
+                <th>EMP_ADDRESS</th>
+                <th>PHOTO</th>
+              </tr>
+            {% for employeedetail in emp_list %}
+            <tr>
+                <td>{{ employeedetail.empNo }}</td>
+                <td>{{ employeedetail.empName }}</td>
+                <td>{{ employeedetail.empSalary }}</td>
+                <td>{{ employeedetail.empAddress }}</td>
+                <td><img src="{{ employeedetail.empPhoto }}" width="150px" height="150px"></img></td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>
